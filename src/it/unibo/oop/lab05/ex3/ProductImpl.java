@@ -21,4 +21,10 @@ public class ProductImpl implements Product {
 	public double getQuantity() {
 		return this.quantity;
 	}
+	
+	@Override
+	public String toString() {
+		return "[ " + this.getName() + ", " + this.getQuantity() + " ]";
+	}
 }
+

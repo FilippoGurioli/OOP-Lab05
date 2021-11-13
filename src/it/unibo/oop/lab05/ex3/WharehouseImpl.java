@@ -2,11 +2,16 @@ package it.unibo.oop.lab05.ex3;
 
 import java.util.Set;
 import java.util.LinkedHashSet;
+import java.util.Objects;
 
 public class WharehouseImpl implements Warehouse{
 	
 	private LinkedHashSet<Product> wh;
 
+	public WharehouseImpl() {
+		wh = new LinkedHashSet<Product>();
+	}
+	
 	public void addProduct(Product p) {
 		this.wh.add(p);
 	}
@@ -41,5 +46,23 @@ public class WharehouseImpl implements Warehouse{
 		}
 		return -1;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(wh);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		WharehouseImpl other = (WharehouseImpl) obj;
+		return Objects.equals(wh, other.wh);
+	}
+	
 
 }
