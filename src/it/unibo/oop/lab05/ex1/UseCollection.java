@@ -24,7 +24,7 @@ public final class UseCollection {
          * Unless you need to perform specific operations, always use the most
          * generic interface.
          * If we use `var` instead of specifying Collection<Integer> what type
-         * will `coll` have?
+         * will `coll` have? Answer: ArrayList<Integer>
          */
         final Collection<Integer> coll = new ArrayList<>();
         coll.addAll(Arrays.asList(1, 3, 5, 7, 9, 11)); // var-args

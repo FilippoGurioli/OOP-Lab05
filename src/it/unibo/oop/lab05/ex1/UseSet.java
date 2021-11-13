@@ -56,5 +56,11 @@ public final class UseSet {
     		System.out.println(a);
     	}
     	
+    	for (String a : scatolaStringhe) {
+    		if (Integer.parseInt(a) % 2 != 0) {
+    			System.out.println("false, some numbers aren't even");
+    			return;
+    		}
+    	}
     }
 }
